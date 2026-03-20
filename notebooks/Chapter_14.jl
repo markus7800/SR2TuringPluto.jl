@@ -579,7 +579,7 @@ md" #### Code 14.26"
     bEW ~ Normal(0, 0.5)
     bQE ~ Normal(0, 0.5)
     μW = @. aW + bEW*E
-    μE = @. aW + bQE*Q
+    μE = @. aE + bQE*Q
     Σ = (σ .* σ') .* ρ
     for i ∈ eachindex(WE)
         WE[i] ~ MvNormal([μW[i], μE[i]], Σ)
